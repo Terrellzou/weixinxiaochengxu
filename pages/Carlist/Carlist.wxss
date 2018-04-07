@@ -1,0 +1,57 @@
+.page_row{  
+  display: flex;  
+  flex-direction:column;
+}  
+
+.search-add input{
+	 height: 70rpx;
+	 background-color: #fff;
+	 float: left;
+	 border-radius: 20rpx;
+	 border: 1px solid #d0d0d0; 
+	 width: 80%; 
+}
+.search-add-right{
+	width: 18%;
+	height: 70rpx;
+	float: right;
+	position: relative;
+}
+.search-add-right .zan-icon-search{
+	height: 46rpx;
+	width: 46rpx;
+	margin:auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right:50rpx;
+}
+/* 垂直居中 */
+.zan-icon-add{
+	margin:auto;
+	position: absolute;
+	top: 0;
+	left: 80rpx;
+	bottom: 0;
+	right: 0;
+	color: 	#303030;
+	height: 46rpx;
+	width: 46rpx;
+}
+.zan-panel{
+  position:relative;background:#fff;margin-top:10px;overflow:hidden; border: 1px solid #d0d0d0; 
+}
+.cardId{
+  height: 27px;
+  width: 86px;
+  border: 1px solid #000;
+  background-color:  	#FFD700;
+  text-align: center;
+  line-height: 27px;
+}
+.tips{
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}

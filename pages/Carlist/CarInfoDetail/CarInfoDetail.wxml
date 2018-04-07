@@ -1,0 +1,61 @@
+<view class="container">
+
+<view class="repairer">
+	<view class='cardId'><text>黑12345</text></view>
+     <image class='masterpic' src='../../../images/2.png' ></image>
+     <text class="master">  维修师傅 </text>  
+   </view>
+    <view class="zan-icon zan-icon-question" bindtap="fixdetail"></view>
+
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text> 型号: </text></view>
+       <view class="zan-cell__ft"><text> 宝马x6 </text></view>
+    </view>
+  </view>
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text> 生产厂家: </text></view>
+      <view class="zan-cell__ft"><text> 四平喜车厂</text></view>
+    </view>
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>购买日期:</text></view>
+      <view class="zan-cell__ft"><text> 2018-12-05</text></view>
+    </view>
+    </view>
+
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>所属车队:</text></view>
+      <view class="zan-cell__ft"><text> 十一车队</text></view>
+      <button type="button">调拔</button>
+    </view>
+  </view>
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>维修定额:</text></view>
+      <view class="zan-cell__ft"><text> 180</text></view>
+        <button type="button">调整</button>
+    </view>
+  </view>
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text> 工时结余: </text></view>
+      <view class="zan-cell__ft"><text> 50</text></view>
+        <button type="button">充值</button>
+    </view>
+  </view>
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text> 保养间隔</text>	</view>
+       <view class="zan-cell__ft"><text> 180</text></view>
+        <button type="button">设置</button>
+    </view>
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text> 下次保养 </text></view>
+      <view class="zan-cell__ft"><text>2019-01-01</text></view>
+    </view>
+    </view>
+    <view class="apply" bindtap="apply"><text>维修申请</text></view>
+	 <view class="inform" bindtap="inform"><text>通知保养</text></view>
+</view>

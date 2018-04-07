@@ -1,0 +1,98 @@
+/**index.wxss**/
+/* page{
+  background-color: lightcyan;
+  background-image: '../../timg.jpg';
+} */
+.page_row{  
+  display: flex;  
+  flex-direction: row ;
+}  
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+/* 与表单有关的样式 */
+.table {
+  border: 4px solid darkgray;  
+  width: 100%;  
+  margin-top: 1rem;  
+  margin-right: 1rem;  
+  margin-left: 1rem;  
+}
+.tr {  
+  display: flex;  
+  width: 100%;  
+  justify-content: center;  
+  height: 3rem;  
+  align-items: center;  
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.tb{
+  width:40%;
+    justify-content: center;
+    text-align: center;
+}
+/* 与搜索栏有关的样式 */
+.search{  
+ width:100%;
+ background-color: #fff;
+ height: 78rpx;
+ position: absolute;
+ top: 1px;
+}   
+.search input{  
+  width: 100%;
+  height: 70rpx;  
+  border: 1px solid #d0d0d0;  
+  border-radius: 20rpx;
+}  
+.bc_text {  
+  line-height: 68rpx;   
+}  
+  
+
+
+ .icon-search{
+
+ float: right;
+ margin-top:-60rpx; 
+ margin-right: 30rpx;
+}
+.cardId{
+  height: 54rpx;
+  width: 172rpx;
+  border: 1px solid #000;
+  background-color:   #FFD700;
+  text-align: center;
+  line-height: 54rpx;
+}
+.tips{
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}

@@ -1,0 +1,47 @@
+  <navigator url="../../index/inex?title=index"  delta='2' open-type="navigateBack"  hover-class="other-navigator-hover"></navigator>
+<view class="container">
+
+	<view class="repairer">
+	<view class='cardId'><text>黑12345</text></view>
+     <image class='masterpic' src='../../../images/2.png' ></image>
+     <text class="master">  维修师傅 </text>  
+   </view>
+    <view class="zan-panel">
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd"><text> 故障名称:</text>		</view>
+      <view class="zan-cell__ft"><text> 发送机异响 </text></view>
+    </view>
+  </view>
+    <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text> 工时定额: </text>		</view>
+      <view class="zan-cell__ft"><text> 50 </text></view>
+    </view>
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text> 所属车队: </text>		</view>
+      <view class="zan-cell__ft"><text> 十一车队 </text></view>
+    </view>
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text> 维修人: </text>		</view>
+      <view class="zan-cell__ft"><text> 修理工程师 </text></view>
+    </view>
+  </view>
+    <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd">
+         <view class="zan-cell__bd"></view>
+        <view class="zan-cell__bd"></view>
+         <view class="zan-cell__bd"></view>
+        <view class="zan-cell__text"><text> 补充描述: </text>		</view>
+<view class="section">
+  <textarea placeholder="走的每一步都不容易，但是越来越接近你的目标了。" auto-focus />
+</view>
+
+   
+   </view>
+
+     
+    </view>
+  </view>
+
+</view>

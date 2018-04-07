@@ -1,0 +1,82 @@
+<!--learn.wxml-->
+<view class="container log-list" wx:if="{{siba}}" style="display: none;">
+ 
+<block wx:for="{{index_key}}" wx:for-item="item" wx:key="key">
+  <view class="zan-panel" catchtap="learnmedia">
+    <view class="zan-card">
+      <view class="zan-card__thumb">
+        <image class="zan-card__img"
+          src="../../images/4.png"
+          mode="aspectFit" style="width:80rpx;height:80rpx;"></image>
+      </view>
+      <view class="zan-card__detail">
+        <view class="zan-card__detail-row">
+          <view class="zan-card__right-col">
+          <view class='zan-icon zan-icon-completed' style="color:green;" ><text>{{item.fee}}</text></view>  
+          </view>
+          <view class="zan-card__left-col">
+         <text>{{item.description}}</text>
+          </view>
+        </view>
+
+        <view class="zan-card__detail-row zan-c-gray-darker">
+          <view class="zan-card__right-col"><text>{{item.date}}</text></view>
+          <view class="zan-card__left-col">
+           上传人：<view class='loder'><text>{{item.admin}}</text></view>
+          </view>
+        </view>
+
+      
+      </view>
+    </view>
+  </view>
+  
+ </block>
+
+
+  <!-- 下划线 -->
+ <view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
+
+
+</view>
+<view class="container log-list" wx:else style="display:block;">
+ 
+<block wx:for="{{index_key}}" wx:for-item="item" wx:key="key">
+  <view class="zan-panel" catchtap="learnmedia">
+    <view class="zan-card">
+      <view class="zan-card__thumb">
+        <image class="zan-card__img"
+          src="../../images/4.png"
+          mode="aspectFit" style="width:80rpx;height:80rpx;"></image>
+      </view>
+      <view class="zan-card__detail">
+        <view class="zan-card__detail-row">
+          <view class="zan-card__right-col">
+          <view class='zan-icon zan-icon-completed' style="color:green;" ><text>{{item.fee}}</text></view>  
+          </view>
+          <view class="zan-card__left-col">
+         <text>{{item.description}}</text>
+          </view>
+        </view>
+
+        <view class="zan-card__detail-row zan-c-gray-darker">
+          <view class="zan-card__right-col"><text>{{item.date}}</text></view>
+          <view class="zan-card__left-col">
+           上传人：<view class='loder'><text>{{item.admin}}</text></view>
+          </view>
+        </view>
+
+      
+      </view>
+    </view>
+  </view>
+  
+ </block>
+
+
+  <!-- 下划线 -->
+ <view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
+
+
+</view>
+

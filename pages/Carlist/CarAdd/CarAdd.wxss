@@ -1,0 +1,73 @@
+.page_row{  
+  display: flex;  
+  flex-direction:column;
+}  
+.Car{
+	 border: 1px solid #d0d0d0; 
+	 background-color: #fff;	
+     height: 180rpx;
+
+}
+.bus_id{
+	
+	height: 90rpx;
+}
+.type{
+	
+	height:90rpx;
+}
+.factory{
+	 border: 1px solid #d0d0d0; 
+	 background-color: #fff;	
+     height: 90rpx;
+}
+.carinfo{
+	border: 1px solid #d0d0d0; 
+	 background-color: #fff;	
+     height: 270rpx;
+}
+.maintain{
+	 border: 1px solid #d0d0d0; 
+	 background-color: #fff;	
+     height: 180rpx;
+}
+text{
+	font-size: 14px;
+	line-height: 90rpx;
+	margin-left: 40rpx;
+
+}
+input{
+	 border: 1px solid #d0d0d0; 
+     width: 500rpx;
+     height:32rpx;
+	 font-size: 14px;
+	 line-height: 32rpx;
+	 display: inline-block;
+	 vertical-align: middle;
+	 margin-left: 60rpx;
+}
+.save{
+	height: 60rpx;
+	background-color:#EE2C2C;
+	margin-top: 30rpx;
+	text-align: center;
+	border-radius: 10rpx;
+	border:1px solid #d0d0d0;
+}
+.save text{
+		color: #fff;
+		line-height: 60rpx;
+}
+.cancel{
+	height: 60rpx;
+	background-color:#fff;
+	margin-top: 30rpx;
+	text-align: center;
+	border-radius: 10rpx;
+	border:1px solid #d0d0d0;
+}
+.cancel text{
+	color: #000;
+    line-height: 60rpx;
+}

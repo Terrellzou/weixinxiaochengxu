@@ -1,0 +1,33 @@
+<view class="container"> 
+	   <view class="repairmaninfo">
+     <image class='repairmanpic' src='../../../images/2.png' ></image>
+     <text class="repairman"> 修理工</text>  
+     </view>
+      <view class="zan-panel" >
+    <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>评价打分</text></view>
+      <view class="zan-cell__ft"><text style="color: red">5</text></view>
+    </view>
+  </view>
+
+  </view>
+   <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd">
+         <view class="zan-cell__bd"></view>
+        <view class="zan-cell__bd"></view>
+         <view class="zan-cell__bd"></view>
+        <view class="zan-cell__text"><text> 擅长领域: </text>		</view>
+<view class="section">
+  <textarea placeholder="走的每一步都不容易，但是越来越接近你的目标了。" auto-focus />
+</view>
+
+   
+   </view>
+
+     
+    </view>
+  </view>
+
+</view>

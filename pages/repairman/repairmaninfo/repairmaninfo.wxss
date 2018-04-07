@@ -1,0 +1,16 @@
+.repairmaninfo{
+   display: flex;
+    flex-direction:column;
+    align-items: center;
+   background-color:#4876FF;  
+  color: #fff;
+  height:130px;
+}
+.repairmanpic{
+	width:180rpx;
+    height:180rpx;
+    margin-top:25rpx;
+}
+.repairman{
+	font-size: 28rpx;
+}

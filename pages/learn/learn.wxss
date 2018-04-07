@@ -1,0 +1,17 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.loder{
+  float: right;
+  color: #1F1F1F;
+}
+.tips{
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}

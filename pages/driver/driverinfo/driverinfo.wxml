@@ -1,0 +1,22 @@
+<view class="container">
+     <view class="driverinfo">
+     <image class='driverpic' src='../../../images/2.png' ></image>
+     <text class="driver"> 驾驶员</text>  
+     </view>
+      <view class="zan-cell">
+    	<view class="zan-cell__bd"><text>驾驶车辆:</text></view>
+      <view class="zan-cell__ft"><picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <input class="picker" type="text" placeholder="{{array[index]}}" bindinput="teaminput" />  </picker></view>
+    </view>
+    <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>驾龄:</text></view>
+      <view class="zan-cell__ft"><text>5年</text></view>
+    </view>
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>驾驶证号:</text></view>
+      <view class="zan-cell__ft"><text>1234567890</text></view>
+    </view>
+</view>
+  <view class="modify" bindtap="modify"><text>修改</text></view>
+</view>

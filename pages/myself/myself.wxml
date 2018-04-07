@@ -1,0 +1,55 @@
+<view class='container'>
+
+ 
+
+     <view class="repairer">
+     <image class='masterpic' src='../../images/2.png' catchtap="personalinfo"></image>
+     <text class="master">  维修师傅 </text>  
+     </view>
+    
+ <view class="zan-panel" >
+    <view class="zan-cell zan-cell--access" bindtap="carmanage">
+      <view class="zan-icon zan-icon-logistics"  style="color: #ff4343;"></view>
+      <view class="zan-cell__bd"> <text class="carmanage" > 车辆管理 </text> </view>
+       <view class="zan-cell__ft">{{}}</view> 
+    </view>
+   
+
+    <view class="zan-cell zan-cell--access" bindtap="idmanage">
+      <view class="zan-icon zan-icon-contact"  style="color: #ff4343;"></view>
+      <view class="zan-cell__bd">  <text class='idmanage'>用户管理</text></view>
+      <view class="zan-cell__ft">{{}}</view>
+    </view>
+    
+
+    <view class="zan-cell zan-cell--access" bindtap="faultmanage">
+      <view class="zan-icon zan-icon-balance-details"  style="color: #ff4343;"></view>
+      <view class="zan-cell__bd">  <text class='faultmanage'>故障管理</text></view>
+      <view class="zan-cell__ft">{{}}</view>
+    </view>
+    
+
+    <view class="zan-cell zan-cell--access" bindtap="drivermanage">
+      <view class="zan-icon zan-icon-qr"  style="color: #ff4343;"></view>
+      <view class="zan-cell__bd">  <text class='drivermanage'>驾驶员管理</text></view>
+      <view class="zan-cell__ft">{{}}</view>
+    </view>
+    
+
+    <view class="zan-cell zan-cell--access" bindtap="staticsmanage">
+      <view class="zan-icon zan-icon-tosend"  style="color: #ff4343;"></view>
+      <view class="zan-cell__bd" >  <text class='staticsmanage'>数据统计</text></view>
+      <view class="zan-cell__ft">{{}}</view>
+    </view>
+    
+
+    <view class="zan-cell zan-cell--access" bindtap="fixmanage">
+      <view class="zan-icon zan-icon-edit-data"  style="color: #ff4343;"></view>
+      <view class="zan-cell__bd">  <text class='fixmanage'>修理工管理</text></view>
+      <view class="zan-cell__ft">{{}}</view>
+    </view>
+    
+
+  </view>
+     <view class="logoff" bindtap="logoff"><text>注销</text></view>
+</view>

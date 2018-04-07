@@ -1,0 +1,6 @@
+<import src="../template/template.wxml" />
+  <block wx:for="{{user_key}}" wx:for-item="item" wx:key="key" >
+  	<template is="useritem" data="{{item}}"/>
+  	</block>
+
+	

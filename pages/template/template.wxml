@@ -1,0 +1,33 @@
+<template name="useritem">
+	<view class="container">
+	 <view class="zan-panel"  bindtap="userinfo">
+    <view class="zan-card">
+      <view class="zan-card__thumb">
+        <image class="zan-card__img"
+          src="../../images/1.png"
+          mode="aspectFit" style="height: 80rpx;width: 80rpx;"></image>
+      </view>
+      <view class="zan-card__detail">
+        <view class="zan-card__detail-row">
+          <view class="zan-card__right-col">
+          <view class='zan-icon'><text> {{item.job}}</text></view>  
+          </view>
+          <view class="zan-card__left-col">
+         <text> {{item.user}} </text>		
+          </view>
+        </view>
+
+        <view class="zan-card__detail-row zan-c-gray-darker">
+          <view class="zan-card__right-col"><text> {{ item.date }} </text></view>
+          <view class="zan-card__left-col">
+           <text> {{item.unit}} </text>		
+          </view>
+        </view>
+
+      
+      </view>
+    </view>
+  </view>
+   <view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
+</view>
+</template>

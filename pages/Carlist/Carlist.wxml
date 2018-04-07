@@ -1,0 +1,37 @@
+<view class="container">
+    <view class='page_row' >   
+  <view class='search-add'>
+    <input type="search" placeholder="车牌号" bindinput="search"/>
+    <view class="search-add-right">
+      <view class="zan-icon zan-icon-search"  type='search' bindtap="search"></view>
+   <navigator url="../../pages/Carlist/CarAdd/CarAdd?title=CarAdd" open-type="navigate" > <view class="zan-icon zan-icon-add " ></view> </navigator>
+    </view>
+  
+  </view>
+   </view> 
+    
+ <block wx:for="{{car_list}}" wx:for-item="item" wx:key="key">
+   <view class="zan-panel" bindtap="carinfo">
+    <view class="zan-card">
+ 
+      <view class="zan-card__detail">
+        <view class="zan-card__detail-row">
+          <view class="zan-card__right-col zan-c-red"><text>{{item.driver}}</text></view>
+          <view class="zan-card__left-col">
+             <view class='cardId'><text>{{item.bus_id}}</text>   </view>
+          </view>
+        </view>
+
+
+        <view class="zan-card__detail-row">
+          <view class="zan-card__right-col zan-icon zan-icon-setting" style="color: #EE9A00"><text>  {{item.repair_fee}} </text> </view>
+          <view class="zan-card__left-col zan-ellipsis--l2">
+       <text> {{item.group_id}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+ <view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
+</view>

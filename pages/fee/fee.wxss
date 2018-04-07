@@ -1,0 +1,26 @@
+
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.price{
+  color: red;
+}
+.cardId{
+  height: 27px;
+  width: 86px;
+  border: 1px solid #000;
+  background-color:  	#FFD700;
+  text-align: center;
+  line-height: 27px;
+}
+.tips{
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}

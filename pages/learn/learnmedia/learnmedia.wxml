@@ -1,0 +1,33 @@
+<view class="container">
+	  <view class="zan-panel" style="margin-top: 0">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>关于车辆运行安全会议学习精神</text></view>
+      <view class="zan-cell__ft"> <view class='zan-icon zan-icon-completed' style="color:green;" ></view>  100+</view>
+    </view>
+  </view>
+	<image style="width: 750rpx" mode="" src="../../../images/sls.jpg" binderror="" bindload=""></image>
+	  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>发布人:管理员</text></view>
+      <view class="zan-cell__ft"><text>时间: 2018-02-09</text></view>
+    </view>
+  </view>
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd">
+         <view class="zan-cell__bd"></view>
+        <view class="zan-cell__bd"></view>
+         <view class="zan-cell__bd"></view>
+        <view class="zan-cell__text"><text> 学习内容: </text>		</view>
+<view class="section">
+  <textarea placeholder="走的每一步都不容易，但是越来越接近你的目标了。" auto-focus />
+</view>
+
+   
+   </view>
+
+     
+    </view>
+  </view>
+
+</view>

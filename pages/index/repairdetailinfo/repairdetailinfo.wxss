@@ -1,0 +1,95 @@
+
+.container{
+  background:#F9F9F9;
+overflow:hidden;
+min-height:100vh;
+box-sizing:border-box;
+padding: 0;
+}
+.repairdetailinfo{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+   background-color:#4876FF;  
+  color: #fff;
+  height:130px;
+}
+.cardId{
+  height: 54rpx;
+  width: 172rpx;
+  border: 1px solid #000;
+  background-color: #FFD700;
+  text-align: center;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  color:#000;
+}
+.driverpic{
+	width:160rpx;
+    height:160rpx;
+    margin-top:10rpx;
+}
+.driver{
+	font-size: 28rpx;
+}
+.zan-icon-question{
+	height: 50rpx;
+	width: 50rpx;
+	float: right;
+	margin-top: -100rpx;
+	margin-right: 100rpx;
+	color: #B22222;
+  position:relative;
+}
+.agree{
+  height: 60rpx;
+  background-color:#EE2C2C;
+  margin-top: 30rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border:1px solid #d0d0d0;
+}
+.agree text{
+    color: #fff;
+    line-height: 60rpx;
+    font-size: 14px;
+}
+.cancel{
+  height: 60rpx;
+  background-color:#fff;
+  margin-top: 30rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border:1px solid #d0d0d0;
+}
+.cancel text{
+  color: #000;
+    line-height: 60rpx;
+    font-size: 14px;
+}
+.complete{
+  height: 60rpx;
+  background-color:#EE2C2C;
+  margin-top: 30rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border:1px solid #d0d0d0;
+}
+.complete text{
+    color: #fff;
+    line-height: 60rpx;
+    font-size: 14px;
+}
+.paid-evaluate{
+  height: 60rpx;
+  background-color:#fff;
+  margin-top: 30rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border:1px solid #d0d0d0;
+}
+.paid-evaluate text{
+  color: #000;
+    line-height: 60rpx;
+    font-size: 14px;
+}

@@ -1,0 +1,32 @@
+<view class="container">
+      <view class="zan-panel" bindtap="repairmaninfo">
+    <view class="zan-card">
+      <view class="zan-card__thumb">
+        <image class="zan-card__img"
+          src="../../images/1.png"
+          mode="aspectFit" style="height: 80rpx;width: 80rpx;"></image>
+      </view>
+      <view class="zan-card__detail">
+        <view class="zan-card__detail-row">
+          <view class="zan-card__right-col">
+          <view class='zan-icon zan-icon-like' style="color: red"></view>  
+          </view>
+          <view class="zan-card__left-col">
+         <text>修理工一</text>   
+          </view>
+        </view>
+
+        <view class="zan-card__detail-row zan-c-gray-darker">
+          <view class="zan-card__right-col"><text>3</text></view>
+          <view class="zan-card__left-col">
+           <text> 电路维修,电器设备</text>   
+          </view>
+        </view>
+
+      
+      </view>
+    </view>
+  </view>
+   <!-- 下划线 -->
+ <view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
+</view>
