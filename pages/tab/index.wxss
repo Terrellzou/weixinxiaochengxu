@@ -1,0 +1,8 @@
+.cardId{
+  height: 54rpx;
+  width: 172rpx;
+  border: 1px solid #000;
+  background-color:   #FFD700;
+  text-align: center;
+  line-height: 54rpx;
+}

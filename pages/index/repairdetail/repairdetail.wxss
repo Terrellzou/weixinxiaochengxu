@@ -31,3 +31,16 @@ padding: 0;
 .master{
   font-size: 28rpx;
 }
+.confirm{
+  height: 60rpx;
+  background-color:#fff;
+  margin-top: 30rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border:1px solid #d0d0d0;
+}
+.confirm text{
+  color: #000;
+    line-height: 60rpx;
+    font-size: 14px;
+}

@@ -9,6 +9,7 @@
 	height: 300rpx;
 	width: 300rpx;
 	margin-top: 160rpx;
+  border-radius: 20%;
 }
 text{
 	color: #000;

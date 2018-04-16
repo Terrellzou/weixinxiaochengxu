@@ -1,3 +1,4 @@
+ var app=getApp()
  var common=require('../login/register/register.js');
 Page({
 
@@ -34,7 +35,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-     if(this.data.siba){
+     if(!app.power){
       wx.showModal({
             title: "信息提示",
             content: "尚未审核,请联系管理员.",

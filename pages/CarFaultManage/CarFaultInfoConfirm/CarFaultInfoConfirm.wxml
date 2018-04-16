@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>所属系统:</text></view>
+            <input class="picker" type="text" placeholder="{{Info.system_name}}" /> 
+    </view>
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>故障名称:</text></view>
+        <input class="picker" type="text" placeholder="{{Info.fault_name}}"  />
+    </view>
+  
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>工时定额:</text></view>
+       <input class="picker" type="text" placeholder="{{Info.fee}}" style="width: 230rpx;margin-right: 20rpx"  />小时
+    </view>
+    
+     <view class="zan-cell">
+    <view class="zan-cell__bd"><text>工时标准:</text></view>
+       <input class="picker" type="text" placeholder="{{Info.fee_time}}"  style="width: 230rpx;margin-right: 48rpx" />元
+    </view>
+    
+  </view>
+      <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd">
+         <view class="zan-cell__bd"></view>
+        <view class="zan-cell__bd"></view>
+         <view class="zan-cell__bd"></view>
+        <view class="zan-cell__text"><text> 故障描述: </text>		</view>
+<view class="section">
+  <form bindsubmit="des">
+  <textarea placeholder="{{Info.detail}}" auto-focus />
+  </form>
+</view>
+   </view> 
+    </view>
+  </view>
+</view>

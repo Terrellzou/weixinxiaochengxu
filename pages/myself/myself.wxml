@@ -3,51 +3,52 @@
  
 
      <view class="repairer">
-     <image class='masterpic' src='../../images/2.png' catchtap="personalinfo"></image>
-     <text class="master">  维修师傅 </text>  
+     <image class='masterpic' src='../../images/default_pic.png' catchtap="personalinfo"></image>
+     <text class="master" >{{username}}</text>  
      </view>
-    
- <view class="zan-panel" >
-    <view class="zan-cell zan-cell--access" bindtap="carmanage">
-      <view class="zan-icon zan-icon-logistics"  style="color: #ff4343;"></view>
-      <view class="zan-cell__bd"> <text class="carmanage" > 车辆管理 </text> </view>
-       <view class="zan-cell__ft">{{}}</view> 
+
+ <view class="zan-panel" wx:for="{{Info}}"  wx:for-item="item" wx:key="index">
+    <view class="zan-cell zan-cell--access" bindtap="skip" data-skipid='{{item.a_url}}'>
+    <image src='{{item.a_pic}}' style="width:30rpx;height: 32rpx" />
+      <view class="zan-cell__bd"> <text class="carmanage" > {{item.a_name}} </text> </view>
+       <view class="zan-cell__ft"></view> 
     </view>
    
 
-    <view class="zan-cell zan-cell--access" bindtap="idmanage">
-      <view class="zan-icon zan-icon-contact"  style="color: #ff4343;"></view>
+ <!--    <view class="zan-cell zan-cell--access" bindtap="idmanage" data-skipid='2'>
+      <image src='../../images/user.png' style="width:30rpx;height: 32rpx" />
       <view class="zan-cell__bd">  <text class='idmanage'>用户管理</text></view>
       <view class="zan-cell__ft">{{}}</view>
     </view>
     
 
-    <view class="zan-cell zan-cell--access" bindtap="faultmanage">
-      <view class="zan-icon zan-icon-balance-details"  style="color: #ff4343;"></view>
+    <view class="zan-cell zan-cell--access" bindtap="faultmanage"  data-skipid='3'>
+   
+      <image src='../../images/carfault.png' style="width:30rpx;height: 32rpx" />
       <view class="zan-cell__bd">  <text class='faultmanage'>故障管理</text></view>
       <view class="zan-cell__ft">{{}}</view>
     </view>
     
 
-    <view class="zan-cell zan-cell--access" bindtap="drivermanage">
-      <view class="zan-icon zan-icon-qr"  style="color: #ff4343;"></view>
+    <view class="zan-cell zan-cell--access" bindtap="drivermanage" data-skipid='4' >
+      <image src='../../images/driver.png' style="width:30rpx;height: 32rpx" />
       <view class="zan-cell__bd">  <text class='drivermanage'>驾驶员管理</text></view>
       <view class="zan-cell__ft">{{}}</view>
     </view>
     
 
-    <view class="zan-cell zan-cell--access" bindtap="staticsmanage">
-      <view class="zan-icon zan-icon-tosend"  style="color: #ff4343;"></view>
+    <view class="zan-cell zan-cell--access" bindtap="staticsmanage" data-skipid='5' >
+      <image src='../../images/statistic.png' style="width:30rpx;height: 32rpx" />
       <view class="zan-cell__bd" >  <text class='staticsmanage'>数据统计</text></view>
       <view class="zan-cell__ft">{{}}</view>
     </view>
     
 
-    <view class="zan-cell zan-cell--access" bindtap="fixmanage">
-      <view class="zan-icon zan-icon-edit-data"  style="color: #ff4343;"></view>
+    <view class="zan-cell zan-cell--access" bindtap="fixmanage" data-skipid='6'>
+     <image src='../../images/repairman.png' style="width:30rpx;height: 32rpx" />
       <view class="zan-cell__bd">  <text class='fixmanage'>修理工管理</text></view>
       <view class="zan-cell__ft">{{}}</view>
-    </view>
+    </view> -->
     
 
   </view>

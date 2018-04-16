@@ -1,24 +1,66 @@
 <view class="container">
-	 <view class='page_row' > 
-   
-	<view class="Car">
-		<view class="bus_id"><text>车辆牌号:</text><input type="text" placeholder="请输入车牌号" name="carid" bindinput="carinput" />
-		</view>
-		<view class="type"><text>车辆型号:</text><input type="text" placeholder="请输入车辆型号" name="type" bindinput="carnameinput" /></view>
-	</view>
-	 <view class="factory"><text>生产厂家:</text><input type="text" placeholder="请设置生产厂家" name="" bindinput="factoryinput" /></view>
-	 <view class="carinfo">
-	 	<view class="order_date"><text >投产日期:</text><input type="text" placeholder="例：2016-01-03" name="" bindinput="dateinput" /></view>
-	 	 <view class="carteam"> <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">  <text>所属车队:</text>
-      <input class="picker" type="text" placeholder="{{array[index]}}" bindinput="teaminput" />  </picker>
-</view>
-	 	<view class="repair_fee"><text >维修定额:</text><input type="text" placeholder="请输入工时定额" name="" bindinput="paidinput" /></view>
-	 </view>
-	 <view class="maintain">
-	 	<view class="maintain_interval"><text >保养间隔:</text><input type="text" placeholder="请输入保养间隔(天)" name="" bindinput="maintaininput"  /></view>
-	 	<view class="maintain_next" ><text >下次保养:</text><input type="text" placeholder="例：2016-01-03" name="" bindinput="maintain_textinput" /></view>	
-	 </view>
-	 <view class="save" bindtap="saveTap"><text>保存</text></view>
-	 <view class="cancel" catchtap="cancelTap"><text>取消</text></view>
-</view>
+  <form bindsubmit="reg">
+    <view class='page_row'>
+      <!-- 布局是每3个输入框有一个外边框 -->
+      <view class="Car">
+        <view class="bus_id">
+          <text>车辆车牌:</text>
+          <input type="text" placeholder="请输入汽车品牌:例：黑E56324" name="card_no" />
+        </view>
+
+        <view class="bus_id">
+          <text>车辆型号:</text>
+          <input type="text" placeholder="请输入型号:例：捷达" name="type" />
+        </view>
+
+        <view class="factory">
+          <text>生产厂家:</text>
+          <input type="text" placeholder="请设置生产厂家" name="factory" />
+        </view>
+      </view>
+
+      <view class="carinfo">
+        <view class="order_date">
+          <text>购入时间:</text>
+          <input type="text" placeholder="例：2016-01-03" name="order_date" />
+        </view>
+
+        <view class="carteam">
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <text>所属车队:</text>
+            <input class="picker" type="text" placeholder="{{array[index]}}" name="group_id" /> </picker>
+        </view>
+
+        <view class="repair_fee">
+          <text>维修定额:</text>
+          <input type="text" placeholder="请输入维修虚拟币年定额" name="repair_fee" />
+        </view>
+      </view>
+
+      <view class="maintain">
+        <view class="repair_fee">
+          <text>虚拟结余:</text>
+          <input type="text" placeholder="请输入维修虚拟币结余" name="total" />
+        </view>
+
+        <view class="maintain_next">
+          <text>保养间隔:</text>
+          <input type="text" placeholder="单位：/天" name="day" />
+        </view>
+
+        <view class="maintain_next">
+          <text>下次保养:</text>
+          <input type="text" placeholder="例：2016-01-03" name="next_date" />
+        </view>
+      </view>
+
+      <view>
+        <button  form-type="submit" class='save'>保存</button>
+      </view>
+      <view>
+        <button class='cancel' bindtap='resert'>取消</button>
+      </view>
+
+    </view>
+  </form>
 </view>

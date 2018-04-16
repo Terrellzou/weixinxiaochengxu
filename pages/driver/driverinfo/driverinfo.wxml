@@ -1,6 +1,6 @@
 <view class="container">
      <view class="driverinfo">
-     <image class='driverpic' src='../../../images/2.png' ></image>
+     <image class='driverpic' src='../../../images/default_pic.png' ></image>
      <text class="driver"> 驾驶员</text>  
      </view>
       <view class="zan-cell">

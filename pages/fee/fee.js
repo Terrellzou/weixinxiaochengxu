@@ -1,3 +1,4 @@
+ var app=getApp()
  var common=require('../login/register/register.js');
 Page({
   data:{
@@ -19,7 +20,7 @@ Page({
     
   },
   onShow:function(){
-     if(this.data.siba){
+     if(!app.power){
       wx.showModal({
             title: "信息提示",
             content: "尚未审核,请联系管理员.",

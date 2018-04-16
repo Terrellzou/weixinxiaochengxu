@@ -1,0 +1,60 @@
+  <import src="/dist/tab/index.wxml" />
+
+<view class="container">
+  <view style="margin:0">
+    <template is="zan-tab"
+      data="{{ ...tab3, componentId: 'tab3' }}"></template>
+  </view>
+  <view class="Carview">
+<view wx:if="{{selectedId==1}}"   class="image" style="width:710rpx;height: 288rpx; margin:0 auto;">
+    <image bindtap="check" data-systemid="2"  class='image1' src="../../images/img1/view3_01.png"></image>
+    <image class='image1' src="../../images/img1/view3_02.png"></image>
+    <image class='image1' src="../../images/img1/view3_03.png"></image>
+    <image class='image1' src="../../images/img1/view3_04.png"></image>
+    <image class='image1' src="../../images/img1/view3_05.png"></image>
+    <image class='image1' src="../../images/img1/view3_06.png"></image>
+    <image class='image1' src="../../images/img1/view3_07.png"></image>
+    <image bindtap="check" data-systemid="3"  class='image1' src="../../images/img1/view3_08.png"></image>
+    <image class='image1' src="../../images/img1/view3_09.png"></image>
+</view>
+
+<view wx:elif ="{{selectedId==2}}"   class="image" style="width:710rpx;height: 288rpx; margin:0 auto;">
+    <image  bindtap="check" data-systemid="5" class='image1' src="../../images/img2/view1_01.png"></image>
+    <image class='image1' src="../../images/img2/view1_02.png"></image>
+    <image class='image1' src="../../images/img2/view1_03.png"></image>
+    <image class='image1' src="../../images/img2/view1_04.png"></image>
+    <image class='image1' src="../../images/img2/view1_05.png"></image>
+    <image class='image1' src="../../images/img2/view1_06.png"></image>
+    <image class='image1' src="../../images/img2/view1_07.png"></image>
+    <image class='image1' src="../../images/img2/view1_08.png"></image>
+    <image  bindtap="check" data-systemid="6" class='image1' src="../../images/img2/view1_09.png"></image>
+</view>
+<view wx:else="{{selectedId==3}}"   class="image" style="width:710rpx;height: 288rpx; margin:0 auto;">
+    <image  bindtap="check" data-systemid="8" class='image1' src="../../images/img3/img3_01.png"></image>
+    <image class='image1' src="../../images/img3/img3_02.png"></image>
+    <image class='image1' src="../../images/img3/img3_03.png"></image>
+    <image class='image1' src="../../images/img3/img3_04.png"></image>
+    <image class='image1' src="../../images/img3/img3_05.png"></image>
+    <image class='image1' src="../../images/img3/img3_06.png"></image>
+    <image class='image1' src="../../images/img3/img3_07.png"></image>
+    <image class='image1' src="../../images/img3/img3_08.png"></image>
+    <image  bindtap="check" data-systemid="9" class='image1' src="../../images/img3/img3_09.png"></image>
+</view>
+
+</view>
+ <view class="zan-panel">
+    <view class="zan-cell ">
+      <view class="zan-cell__bd"><text>当前系统:{{pro[0].system_name}}</text></view>
+       
+    </view>
+  </view>
+  <block wx:for="{{pro}}" wx:for-item="item" wx:key="key">
+    <view class="zan-panel"  bindtap="checkFault" data-id="{{item.fault_id}}"><!-- bindtap="checkFault" id="{{fault_name}}" -->
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>{{item.fault_name}}</text></view>
+      <view class="zan-cell__ft"><image class="repairpic" src="../../images/repair.png" />{{item.fee}}</view>
+    </view>
+  </view>
+</block>
+</view>
+

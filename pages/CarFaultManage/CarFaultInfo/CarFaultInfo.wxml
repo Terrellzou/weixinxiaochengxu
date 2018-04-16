@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>所属系统:</text></view>
+      <picker bindchange="bindPickerChange"  value="{{index}}" range="{{systemarray}}">
+            <input class="picker" type="text" placeholder="{{systemarray[index]}}" name="group_id" /> 
+    </picker>
+    <image src='../../../images/iconfont-arrowdown.png'></image>
+    </view>
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>故障名称:</text></view>
+        <input class="picker" type="text" placeholder="请输入故障名称" bindinput="faultinput" />
+    </view>
+  
+    <view class="zan-cell">
+      <view class="zan-cell__bd"><text>工时定额:</text></view>
+       <input class="picker" type="text" style="width: 230rpx;margin-right: 20rpx" bindinput="feeinput" />小时
+    </view>
+    
+     <view class="zan-cell">
+    <view class="zan-cell__bd"><text>工时标准:</text></view>
+       <input class="picker" type="text" style="width: 230rpx;margin-right: 48rpx" bindinput="timeinput"/>元
+    </view>
+    
+  </view>
+      <view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd">
+         <view class="zan-cell__bd"></view>
+        <view class="zan-cell__bd"></view>
+         <view class="zan-cell__bd"></view>
+        <view class="zan-cell__text"><text> 故障描述: </text>		</view>
+<view class="section">
+  <form bindsubmit="des">
+  <textarea placeholder="走的每一步都不容易，但是越来越接近你的目标了。" auto-focus />
+  </form>
+</view>
+   </view> 
+    </view>
+  </view>
+   <view class="save" bindtap="save"><text>保存</text></view>
+</view>

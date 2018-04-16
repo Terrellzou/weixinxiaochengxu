@@ -1,36 +1,46 @@
 <view class="container">
-     <view class="userinfo">
-     <image class='userpic' src='../../../images/2.png' ></image>
-     <text class="username"> 用户名</text>  
+     <view class="userinfo" data-text="{{title}}">
+     <image class='userpic' src='../../../images/default_pic.png' ></image>
+     <text class="username"> {{title.name}}</text>  
      </view>
 
-  <view class="zan-panel">
+  <!-- <wx:for="{{title}}" wx:key="key" wx:for-item="itemName">这段是为了将后台结果渲染到页面上 -->
+  
+  <view class="zan-panel" data-text="{{title}}" >
     <view class="zan-cell">
       <view class="zan-cell__bd"><text>实名:</text></view>
-      <view class="zan-cell__ft"><text>张三</text></view>
-    </view>
+      <view class="zan-cell__ft"><text>{{title.real_name}}</text></view>
+     </view>
   </view>
 
-  <view class="zan-panel">
-    <view class="zan-cell">
-    	<view class="zan-cell__bd"><text>所属部门:</text></view>
-      <view class="zan-cell__ft"><picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-      <input class="picker" type="text" placeholder="{{array[index]}}" bindinput="teaminput" />  </picker></view>
+  <view class="zan-panel"   >
+    <view class="zan-cell"> 
+      <view class="zan-cell__bd"><text>所属部门:</text></view>
+        
+
+        <view class="zan-cell__ft">
+        <picker bindchange="bindPickerChange" range-key='group_name' range="{{array}}" data-text="{{index}}" >
+      <input class="picker" type="text" placeholder="{{array[index].group_name}}" bindinput="teaminput" />  </picker></view>    
     </view>
-    <view class="zan-cell">
+    <view class="zan-cell"> 
       <view class="zan-cell__bd"><text>所属岗位:</text></view>
-      <view class="zan-cell__ft"><picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
-      <input class="picker" type="text" placeholder="{{array1[index1]}}" bindinput="teaminput" />  </picker></view>
+        
+
+        <view class="zan-cell__ft">
+        <picker bindchange="bindPickerChange1"  range-key='u_name' range="{{array1}}" data-text="{{index1}}" >
+    
+      <input class="picker" type="text" placeholder="{{array1[index1].u_name}}" bindinput="teaminput" />  </picker></view>      
     </view>
-    <view class="zan-cell">
+    <view class="zan-cell" data-text="{{title}}" > 
       <view class="zan-cell__bd"><text>注册手机:</text></view>
-      <view class="zan-cell__ft"><text>13088888888</text></view>
-    </view>
-     <view class="zan-cell">
+      <view class="zan-cell__ft"><text>{{title.mobile}}</text></view>
+     </view>
+     <view class="zan-cell" data-text="{{title}}"> 
       <view class="zan-cell__bd"><text>注册时间:</text></view>
-      <view class="zan-cell__ft"><text>2018-05-06</text></view>
+      <view class="zan-cell__ft"><text>{{title.reg_date}}</text></view>
+      
+     </view>
     </view>
-  </view>
-   <view class="modify" bindtap="modify"><text>修改</text></view>
-	 <view class="cancel" bindtap="cancel"><text>取消</text></view>
+   <view class="modify" bindtap="modify" ><text>修改</text></view>
+   <view class="cancel" bindtap="cancel"><text>取消</text></view>
 </view>

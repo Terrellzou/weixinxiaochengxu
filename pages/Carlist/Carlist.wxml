@@ -1,37 +1,59 @@
 <view class="container">
     <view class='page_row' >   
   <view class='search-add'>
-    <input type="search" placeholder="车牌号" bindinput="search"/>
+    <input type="text" placeholder="车牌号"  bindblur="onBindBlur"  bindfocus="onBindFocus"/>
     <view class="search-add-right">
-      <view class="zan-icon zan-icon-search"  type='search' bindtap="search"></view>
+      <view class="zan-icon zan-icon-search"  type='search' bindtap="search" ></view>
    <navigator url="../../pages/Carlist/CarAdd/CarAdd?title=CarAdd" open-type="navigate" > <view class="zan-icon zan-icon-add " ></view> </navigator>
     </view>
   
   </view>
    </view> 
+
+    <!-- 显示信息 外面套的scroll-view是用来做下拉刷新上拉加载的 -->
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:400px;"
+    class="list" bindscrolltolower="scrolltolower" bindscroll="scroll" bindscrolltoupper="scrolltoupper">
+
+      <block wx:for="{{car_list}}" wx:for-item="itemName"  wx:for-index="idx" wx:key="key" > 
+      <view class="zan-panel" bindtap="carinfo" id='{{itemName.bus_id}}'>
+        <view class="zan-card">
     
- <block wx:for="{{car_list}}" wx:for-item="item" wx:key="key">
-   <view class="zan-panel" bindtap="carinfo">
-    <view class="zan-card">
- 
-      <view class="zan-card__detail">
-        <view class="zan-card__detail-row">
-          <view class="zan-card__right-col zan-c-red"><text>{{item.driver}}</text></view>
-          <view class="zan-card__left-col">
-             <view class='cardId'><text>{{item.bus_id}}</text>   </view>
-          </view>
-        </view>
+          <view class="zan-card__detail">
+            <view class="zan-card__detail-row">
+              <view class="zan-card__right-col zan-c-red"><text>未分配司机</text></view>
+              <view class="zan-card__left-col">
+                <view class='cardId'><text>{{itemName.card_no}}</text>   </view>
+              </view>
+            </view>
 
 
-        <view class="zan-card__detail-row">
-          <view class="zan-card__right-col zan-icon zan-icon-setting" style="color: #EE9A00"><text>  {{item.repair_fee}} </text> </view>
-          <view class="zan-card__left-col zan-ellipsis--l2">
-       <text> {{item.group_id}}</text>
+            <view class="zan-card__detail-row">
+              <view class="zan-card__right-col zan-icon zan-icon-setting" style="color: #EE9A00"><text>  {{itemName.repair_fee}} </text> </view>
+              <view class="zan-card__left-col zan-ellipsis--l2">
+            <view> 
+            
+            <text wx:if="{{itemName.group_id == 1}}" class="zan-card__right-col zan-c-red" >分公司</text>
+            <text wx:if="{{itemName.group_id == 2}}" class="zan-card__right-col zan-c-red" >第一车队</text>
+            <text wx:elif="{{itemName.group_id == 3}}" class="zan-card__right-col zan-c-green" >第二车队</text> 
+            <text wx:elif="{{itemName.group_id == 4}}" class="zan-card__right-col zan-c-orange" >第三车队</text>
+            <text wx:elif="{{itemName.group_id == 5}}" class="zan-card__right-col zan-c-green" >第四车队</text>
+            
+            </view>  
+              </view>
+            </view>
           </view>
         </view>
       </view>
-    </view>
-  </view>
-</block>
- <view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
+     </block>
+
+     <view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
+    </scroll-view>
+
+    <view class="body-view">
+      <loading hidden="{{hidden}}" bindchange="loadingChange">
+        <text style='font-size: 28rpx;color: #2b2b2b;'>加载更多...</text>.
+      </loading>
+    </view> 
+ 
 </view>
+<view class="bg" bindtap='hideview' style='display:{{display}}'></view>  

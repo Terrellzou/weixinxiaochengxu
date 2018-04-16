@@ -1,15 +1,43 @@
-{
+ {
   "pages":[
+     "pages/login/login",
+ 
+   
+    "pages/CarFaultInfocheck/CarFaultInfocheck",
+     "pages/CarFaultManage/CarFaultInfoConfirm/CarFaultInfoConfirm",
+     "pages/index/repairdetailinfo/repairdetailinfo",
+    "pages/CarFaultManage/CarFaultManage",
+     "pages/CarFaultManage/CarFaultManag6e",
+     "pages/CardirectView/CardirectView",
+      
+      "pages/dataStatistic/dataStatistic",
+   
+   
+     "pages/CarFaultManage/CarFaultInfo/CarFaultInfo",
+   
+     
+  
+  
     
+    
+     
+    
+     "pages/myself/myself",
+     
+    
+     
+
+     
+    
+     "pages/tab/index",
+ 
+    
+      "pages/Carlist/CarInfoDetail/CarInfoDetail",
+     
+  
+     
      "pages/login/register/register",
        "pages/index/index",
-      "pages/login/login",
-    "pages/myself/myself",
-   
-   
-   
- 
-     
     "pages/fee/fee",
     "pages/myself/personalinfo/personalinfo",
     "pages/index/repairdetail/repairdetail",
@@ -18,14 +46,14 @@
     
     "pages/driver/driver",
     "pages/driver/driverinfo/driverinfo",
-    "pages/Carlist/CarInfoDetail/CarInfoDetail",
+  
     "pages/user/user",
     "pages/template/template",
     "pages/repairman/repairman",
     "pages/Carlist/CarAdd/CarAdd",
     "pages/repairman/repairmaninfo/repairmaninfo",
     "pages/learn/learn",
-    "pages/index/repairdetailinfo/repairdetailinfo",
+   
     "pages/fee/feedetail/feedetail" ,
     "pages/learn/learnmedia/learnmedia"
   ],
@@ -42,25 +70,25 @@
     "list": [
   
       {
-        "selectedIconPath": "images/icon_nav_special.png",
-        "iconPath": "images/icon_nav_nav.png",
+        "selectedIconPath": "images/repair_on.png",
+        "iconPath": "images/repair_off.png",
         "pagePath": "pages/index/index"
       },
       {
-        "selectedIconPath": "images/icon_nav_z-index.png",
-        "iconPath": "images/icon_nav_layout.png",
+        "selectedIconPath": "images/fee_on.png",
+        "iconPath": "images/fee_off.png",
         "pagePath": "pages/fee/fee"
        
       },
       {
-        "selectedIconPath": "images/icon_tabbar.png",
-        "iconPath": "images/icon_nav_form.png",
+        "selectedIconPath": "images/learn_on.png",
+        "iconPath": "images/learn_off.png",
         "pagePath": "pages/learn/learn"
        
       },
       {
-        "selectedIconPath": "images/icon_nav_z-index.png",
-        "iconPath": "images/icon_nav_panel.png",
+        "selectedIconPath": "images/myactive.png",
+        "iconPath": "images/my.png",
         "pagePath": "pages/myself/myself"
        
       }

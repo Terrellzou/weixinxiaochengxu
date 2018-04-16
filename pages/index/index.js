@@ -1,71 +1,56 @@
- var common=require('../login/register/register.js');
- 
-
+var app=getApp();
+var global_url=app.global_url
 Page({
   data: {
-    siba:"common.Info.isshow"
-    // motto: 'Hello World',
-    // userInfo: {},
-    // hasUserInfo: false,
+     motto: 'Hello World',
+    userInfo: {},
+    hasUserInfo: false,
     // message:{},
-    // canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    // info:{},
-    // //输入的信息
-    // input:"",
-    // p_name:null,
-    // imgUrls: [
-    //   '../../images/0.jpg',
-    //   '../../images/2.jpg',
-    //   '../../images/3.jpg'
-    // ],
-    // //轮播条中的设置-是否显示面板指示点
-    // indicatorDots: true,
-    // //轮播条中的设置-是否自动切换
-    // autoplay: true,
-    // //轮播条中的设置-自动切换时间间隔
-    // interval: 3000,
-    // //轮播条中的设置-滑动动画时长
-    // duration: 1000,
-    // //设置初始页
-    // page : "1",
-    // hidden: true
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    info:{},
+    //输入的信息
+    input:"",
+    p_name:null,
+    imgUrls: [
+      '../../images/0.jpg',
+      '../../images/2.jpg',
+      '../../images/3.jpg'
+    ],
+    //设置初始页
+    page : "1",
+    hidden: true
     
   },
 
 
-  changeIndicatorDots: function (e) {
-    this.setData({
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
-  //与轮播条有关的js
-  changeAutoplay: function (e) {
-    this.setData({
-      autoplay: !this.data.autoplay
-    })
-  },
-  intervalChange: function (e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-  durationChange: function (e) {
-    this.setData({
-      duration: e.detail.value
-    })
-  },
+  // changeIndicatorDots: function (e) {
+  //   this.setData({
+  //     indicatorDots: !this.data.indicatorDots
+  //   })
+  // },
+  // //与轮播条有关的js
+  // changeAutoplay: function (e) {
+  //   this.setData({
+  //     autoplay: !this.data.autoplay
+  //   })
+  // },
+  // intervalChange: function (e) {
+  //   this.setData({
+  //     interval: e.detail.value
+  //   })
+  // },
+  // durationChange: function (e) {
+  //   this.setData({
+  //     duration: e.detail.value
+  //   })
+  // },
   
  
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+ 
   //页面加载的时候触发的事件 发送请求进行分页查询所有的信息 为了与上拉刷新 下拉加载配合
   onLoad: function () {
   
-    /*this.setData({
+    this.setData({
       hidden: false
     })
     var that = this
@@ -73,7 +58,7 @@ Page({
     
     console.log(page)
     wx.request({
-      url: "http://localhost:8080/Project/project/findByPage.do",
+      url: global_url+"repair/findRepairAllByPage.do",
       data: {
         page: page 
       },
@@ -84,7 +69,7 @@ Page({
       success: function (res) {
         console.log(res.data);
         that.setData({
-          message: res.data.lists
+          message: res.data.data
         })
         page++
         that.setData({
@@ -95,66 +80,17 @@ Page({
       fail: function (res) {
         console.log(".....fail.....");
       }
-    }),*/
-
-    //数据绑定
-    
- var data=[{
-    CarID:"黑E123456",
-    status:"待审批",
-    date:"2018-03-13",
-    description:" 发动机异常响声",
-    color:"zan-c-red"
-  },
-   { CarID:"黑E123456",
-    status:"维修中",
-    date:"2018-03-13",
-    description:" 发动机异常响声",
-    color:"zan-c-orange"
-  },
-  {
-     CarID:"黑E123456",
-    status:"维修完成",
-    date:"2018-03-13",
-    description:" 发动机异常响声",
-    color:"zan-c-green"
-  },
-  {
-    CarID:"黑E123456",
-    status:"支付",
-    date:"2018-03-13",
-    description:" 发动机异常响声",
-    color:"zan-c-green"
-  },
-  {
-     CarID:"黑E123456",
-    status:"支付",
-    date:"2018-03-13",
-    description:" 发动机异常响声",
-    color:"zan-c-green"
-  },
-  {
-     CarID:"黑E123456",
-    status:"支付",
-    date:"2018-03-13",
-    description:" 发动机异常响声",
-     color:"zan-c-green"
-  }]
-  this.setData({
-    index_key:data
-  })
+    })
 
   },
   //滚动到底部/右边，会触发 scrolltolower 事件
   scrolltolower: function(){
-    console.log("触发了下拉加载的事件")
-    
-    
+
     var that = this
     var page = this.data.page
     page++
     wx.request({
-      url: "http://localhost:8080/Project/project/findByPage.do",
+      url: global_url+"repair/findRepairAllByPage.do",
       data: {
         page: page
       },
@@ -189,7 +125,7 @@ Page({
     var page = this.data.page
     page=1
     wx.request({
-      url: "http://localhost:8080/Project/project/findByPage.do",
+      url:global_url+"repair/findRepairAllByPage.do",
       data: {
         page: page
       },
@@ -203,9 +139,9 @@ Page({
           message: res.data.lists
         })
         page++
-        // that.setData({
-        //   hidden: true
-        // })
+        that.setData({
+          hidden: true
+        })
 
       },
       fail: function (res) {
@@ -215,7 +151,7 @@ Page({
   },
   
   onShow(){
-      if(this.data.siba){
+      if(!app.power){
       wx.showModal({
             title: "信息提示",
             content: "尚未审核,请联系管理员.",
@@ -257,7 +193,7 @@ Page({
     var name = this.data.input
     //发送请求-根据输入的内功发送请求到数据库中查找
     wx:wx.request({
-      url: 'http://localhost:8080/Project/project/findByName.do',
+      url: global_url+"repair/findRepairAllByPage.do",
       data: {
         p_name:name
       },

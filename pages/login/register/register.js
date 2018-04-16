@@ -1,3 +1,5 @@
+var app=getApp();
+var global_url=app. global_url
 
 Page({
   data: {
@@ -54,7 +56,7 @@ Page({
       method:"post",
       dataType:"json",
 
-      url: 'https://qichuang.mynatapp.cc/Weixinapp/user/regist.do', //仅为示例，并非真实的接口地址
+      url:  global_url+'user/regist.do', //仅为示例，并非真实的接口地址
       data: {
         name: that.data.username,
         pwd: that.data.password
@@ -64,8 +66,10 @@ Page({
       },
       success: function (res) {
         var data = res.data
+        app.name=data.name
          console.log(data)
-        if(data.name == name) {
+        // var s=JSON.stringify(data.name)
+        if(data.status == 1) {
           wx.showModal({
             title: "信息提示",
             content: "该用户名已被注册"
@@ -120,7 +124,3 @@ Page({
        type:"1"
        }
   ]
-
-  module.exports = {
-       Info: Info
-    }

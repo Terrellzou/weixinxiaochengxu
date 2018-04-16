@@ -1,0 +1,72 @@
+.container{
+  background:#F9F9F9;
+  overflow:hidden;
+  min-height:100vh;
+  box-sizing:border-box;
+  padding: 0;
+   display: flex;
+  flex-direction:column;
+}
+
+
+.date{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 80rpx;
+	background-color: #fff;
+	justify-content: space-between;
+}
+
+.year{
+	margin-left: 30rpx;
+	width: 300rpx;
+	height: 80rpx;
+}
+.month{
+	margin-right: -20rpx;
+	width: 300rpx;
+	height: 80rpx;
+}
+.date text{
+	 font-size: 16px;
+	 color:#666;
+     line-height: 80rpx;
+}
+
+image{
+	 height: 20rpx;
+     width: 20rpx;
+     margin-left: -30rpx
+}
+
+.yearpicker{
+	 border: 1px solid #d0d0d0; 
+     width: 140rpx;
+     height:32rpx;
+	 font-size: 14px;
+	 line-height: 32rpx;
+	 display: inline-block;
+	 vertical-align: middle;
+	 margin-left: 60rpx;
+	 border-radius: 15rpx;
+}
+.monthpicker{
+	border: 1px solid #d0d0d0; 
+     width: 110rpx;
+     height:32rpx;
+	 font-size: 14px;
+	 line-height: 32rpx;
+	 display: inline-block;
+	 vertical-align: middle;
+	 margin-left: 60rpx;
+	 border-radius: 15rpx;
+}
+.cardId{
+  height: 27px;
+  width: 86px;
+  border: 1px solid #000;
+  background-color:#FFD700;
+  text-align: center;
+  line-height: 27px;
+}

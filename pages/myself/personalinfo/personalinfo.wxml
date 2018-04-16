@@ -1,7 +1,7 @@
 <view class="container"> 
 	   <view class="personalinfo">
-     <image class='personpic' src='../../../images/2.png' ></image>
-     <text class="person"> 用户名</text>  
+     <image class='personpic' src='{{avatarUrl}}' bindtap="pickphoto" ></image>
+     <text class="person">{{username}}</text>  
      </view>
        <view class="zan-panel">
     <view class="zan-cell">

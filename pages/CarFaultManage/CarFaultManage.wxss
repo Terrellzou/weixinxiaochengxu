@@ -1,0 +1,27 @@
+.container{
+  background:#F9F9F9;
+ overflow:hidden;
+ min-height:100vh;
+ box-sizing:border-box;
+ padding: 0;
+}
+.Carview{
+	height: 320rpx;
+	width: 100%;
+	background-color: #fff;
+}
+
+.image1{
+	width: 236rpx;
+	height: 96rpx;
+	vertical-align:top;
+}
+.repairpic{
+	height:32rpx;
+	width: 32rpx;
+	vertical-align:middle;
+	margin-right: 15rpx;
+}
+.zan-icon-add{
+	color: 	#303030;
+}

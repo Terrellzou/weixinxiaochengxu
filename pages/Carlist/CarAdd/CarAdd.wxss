@@ -3,10 +3,10 @@
   flex-direction:column;
 }  
 .Car{
-	 border: 1px solid #d0d0d0; 
-	 background-color: #fff;	
-     height: 180rpx;
-
+	border: 1px solid #d0d0d0; 
+	background-color: #fff;	
+  height: 270rpx;
+  
 }
 .bus_id{
 	
@@ -17,19 +17,18 @@
 	height:90rpx;
 }
 .factory{
-	 border: 1px solid #d0d0d0; 
-	 background-color: #fff;	
-     height: 90rpx;
+
+   height: 90rpx;
 }
 .carinfo{
 	border: 1px solid #d0d0d0; 
-	 background-color: #fff;	
-     height: 270rpx;
+	background-color: #fff;	
+  height: 270rpx;
 }
 .maintain{
-	 border: 1px solid #d0d0d0; 
-	 background-color: #fff;	
-     height: 180rpx;
+	border: 1px solid #d0d0d0; 
+	background-color: #fff;	
+  height: 270rpx;
 }
 text{
 	font-size: 14px;
@@ -54,11 +53,12 @@ input{
 	text-align: center;
 	border-radius: 10rpx;
 	border:1px solid #d0d0d0;
+
+	color: #000;
+    line-height: 60rpx;
+    font-size: 14px;
 }
-.save text{
-		color: #fff;
-		line-height: 60rpx;
-}
+
 .cancel{
 	height: 60rpx;
 	background-color:#fff;
@@ -66,8 +66,7 @@ input{
 	text-align: center;
 	border-radius: 10rpx;
 	border:1px solid #d0d0d0;
-}
-.cancel text{
 	color: #000;
     line-height: 60rpx;
+    font-size: 14px;
 }

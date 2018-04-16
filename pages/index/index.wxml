@@ -1,6 +1,5 @@
 <!--index.wxml-->
-<view class="container" wx:if="{{siba}}" style="display: none;">
-
+<view class="container">
  
   <!-- 搜索 -->
   <view class='page_row' >   
@@ -10,48 +9,17 @@
       
     </view>     
   </view> 
+  
 
   <view class="doc-title"></view>
-    <block wx:for="{{index_key}}" wx:for-item="item" wx:key="key">
-
-  <view class="zan-panel" bindtap="repairdetailinfo">
-    <view class="zan-card">
- 
-      <view class="zan-card__detail">
-        <view class="zan-card__detail-row">
-          <view class="zan-card__right-col zan-c-red"><text>{{item.status}}</text></view>
-          <view class="zan-card__left-col">
-             <view class='cardId'><text>{{item.CarID}}</text>   </view>
-          </view>
-        </view>
-
-
-        <view class="zan-card__detail-row">
-          <view class="zan-card__right-col"><text>  {{item.date}} </text> </view>
-          <view class="zan-card__left-col zan-ellipsis--l2">
-       <text> {{item.description}}</text>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>
-</block>
-
-<view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
-   <!-- 轮播条 需要的时候可以开开   -->
-  <!-- <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="key">
-    <swiper-item>
-      <image src="{{item}}" class="slideimage" width="100%" height="150" />
-    </swiper-item>
-    </block>
-  </swiper> -->
+    
+  
+  
+  
  
     <!-- 显示信息 外面套的scroll-view是用来做下拉刷新上拉加载的 -->
-    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:400px;"
-    class="list" bindscrolltolower="scrolltolower" bindscroll="scroll" bindscrolltoupper="scrolltoupper">
-      <view class="zan-panel"  wx:for="{{message}}" wx:for-index="idx" wx:key="key" wx:for-item="itemName">
+   
+     <!--  <view class="zan-panel"  wx:for="{{message}}" wx:for-index="idx" wx:key="key" wx:for-item="itemName">
         <view class="zan-cell">
           <view class="zan-cell__bd">
             <view class="zan-cell__text"> 编号:  {{itemName.p_id}} </view>
@@ -60,93 +28,62 @@
           
           <view class="zan-cell__ft"> 详情 </view>
         </view>
-      </view>
-    </scroll-view>
-     <!-- <view class="body-view">
-      <loading hidden="{{hidden}}" bindchange="loadingChange">
-        <text style='font-size: 28rpx;color: #2b2b2b;'>加载更多...</text>.
-      </loading>
-    </view> 
-    -->
+      </view> -->
+   
+    
 
-  
- 
 
-  
-</view>
-<view class="container" wx:else style="display: block;">
 
- 
-  <!-- 搜索 -->
-  <view class='page_row' >   
-    <view class="search">  
-          <input class="" placeholder="车牌号" name="key" bindinput ="inputKey"/> 
-           <icon class="icon-search"  type='search'></icon>
+
+
+     <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:500px;"
+    class="list" bindscrolltolower="scrolltolower" bindscroll="scroll" bindscrolltoupper="scrolltoupper" enable-back-to-top>
+      <view class="zan-panel" bindtap="repairdetailinfo" wx:for="{{message}}" wx:for-index="idx" wx:key="key" wx:for-item="itemName">
+          <view class="zan-card">
       
-    </view>     
-  </view> 
+            <view class="zan-card__detail">
+              <view class="zan-card__detail-row">
+                <!-- 根据状态显示不同的数据 -->
+                 <view class="zan-card__right-col zan-c-orange">  
+                  <view>
+                    
+                    <text wx:if="{{itemName.state == 1}}" class="zan-card__right-col zan-c-red" >待审批</text>
+                    <text wx:elif="{{itemName.state == 2}}" class="zan-card__right-col zan-c-green" >审批通过</text> 
+                    <text wx:elif="{{itemName.state == 3}}" class="zan-card__right-col zan-c-orange" >维修中</text>
+                    <text wx:elif="{{itemName.state == 4}}" class="zan-card__right-col zan-c-green" >维修完成</text>
+                    <text wx:else="{{itemName.state == 5}}"  class="zan-card__right-col zan-c-green" >已支付</text> 
+                  </view>
+                  <!-- <view wx:elif="{{message.state == 3}}" class="zan-card__right-col zan-c-orange">
+                    维修中
+                  </view>
+                  <view wx:elif="{{message.state == 4}}" class="zan-card__right-col zan-c-green">
+                    维修完成
+                  </view>
+                  <view wx:elif="{{message.state == 5}}"  class="zan-card__right-col zan-c-green">
+                    支付
+                  </view> -->
+                </view>  
+                <view class="zan-card__left-col">
+                  <view class='cardId'><text>{{itemName.card_no}}</text></view>
+                </view>
+              </view>
 
-  <view class="doc-title"></view>
-    <block wx:for="{{index_key}}" wx:for-item="item" wx:key="key">
-
-  <view class="zan-panel" bindtap="repairdetailinfo">
-    <view class="zan-card">
- 
-      <view class="zan-card__detail">
-        <view class="zan-card__detail-row">
-          <view class="zan-card__right-col zan-c-red"><text>{{item.status}}</text></view>
-          <view class="zan-card__left-col">
-             <view class='cardId'><text>{{item.CarID}}</text>   </view>
-          </view>
-        </view>
-
-
-        <view class="zan-card__detail-row">
-          <view class="zan-card__right-col"><text>  {{item.date}} </text> </view>
-          <view class="zan-card__left-col zan-ellipsis--l2">
-       <text> {{item.description}}</text>
-          </view>
-        </view>
+              <view class="zan-card__detail-row">
+                <view class="zan-card__right-col">{{itemName.apply_date}}</view>
+                <view class="zan-card__left-col zan-ellipsis--l2">
+              {{itemName.detail}}
+                </view>
+              </view>
+            </view>  
       </view>
     </view>
+    <view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
+   </scroll-view>
+   <view class="body-view">
+    <loading hidden="{{hidden}}" bindchange="loadingChange" >
+      加载中...
+    </loading>
   </view>
-</block>
-
-<view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
-   <!-- 轮播条 需要的时候可以开开   -->
-  <!-- <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="key">
-    <swiper-item>
-      <image src="{{item}}" class="slideimage" width="100%" height="150" />
-    </swiper-item>
-    </block>
-  </swiper> -->
- 
-    <!-- 显示信息 外面套的scroll-view是用来做下拉刷新上拉加载的 -->
-    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:400px;"
-    class="list" bindscrolltolower="scrolltolower" bindscroll="scroll" bindscrolltoupper="scrolltoupper">
-      <view class="zan-panel"  wx:for="{{message}}" wx:for-index="idx" wx:key="key" wx:for-item="itemName">
-        <view class="zan-cell">
-          <view class="zan-cell__bd">
-            <view class="zan-cell__text"> 编号:  {{itemName.p_id}} </view>
-            <view class="zan-cell__desc"> 项目名:  {{itemName.p_name}} </view>
-          </view>
-          
-          <view class="zan-cell__ft"> 详情 </view>
-        </view>
-      </view>
-    </scroll-view>
-     <!-- <view class="body-view">
-      <loading hidden="{{hidden}}" bindchange="loadingChange">
-        <text style='font-size: 28rpx;color: #2b2b2b;'>加载更多...</text>.
-      </loading>
-    </view> 
-    -->
-
-  
- 
-
+    
   
 </view>
-

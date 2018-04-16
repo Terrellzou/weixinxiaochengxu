@@ -1,6 +1,67 @@
-<import src="../template/template.wxml" />
-  <block wx:for="{{user_key}}" wx:for-item="item" wx:key="key" >
-  	<template is="useritem" data="{{item}}"/>
-  	</block>
+<!-- <import src="../template/template.wxml" /> -->
+<view class="container">
+  <!-- 显示信息 外面套的scroll-view是用来做下拉刷新上拉加载的 -->
+  <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:400px;"
+  class="list" bindscrolltolower="scrolltolower" bindscroll="scroll" bindscrolltoupper="scrolltoupper">
+
+    <block wx:for="{{user_key}}"  wx:for-item="itemName" wx:key="key"  >
+        <!-- <template is="useritem" data="{{itemName}}"/> -->
+
+          <view class="zan-panel" catchtap='userinfo' id='{{itemName.u_id}}' >
+            <view class="zan-card">
+              <view class="zan-card__thumb">
+                <image class="zan-card__img"
+                  src="../../images/default_pic2.png"
+                  mode="aspectFit" style="height: 80rpx;width: 80rpx;"></image>
+              </view>
+              <view class="zan-card__detail">
+                <view class="zan-card__detail-row">
+                  <view class="zan-card__right-col">
+                  <view class='zan-icon'  >
+                    <!-- 这里显示错误 -->
+                    <text wx:if="{{itemName.u_type == 0}}" class="zan-card__right-col zan-c-red" >技术办主任</text>
+                    <text wx:elif="{{itemName.u_type == 1}}" class="zan-card__right-col zan-c-red" >机修队长</text>  
+                    <text wx:elif="{{itemName.u_type == 2}}" class="zan-card__right-col zan-c-red" >管理人员</text>
+                    <text wx:elif="{{itemName.u_type == 3}}" class="zan-card__right-col zan-c-green" >驾驶员</text> 
+                    <text wx:elif="{{itemName.u_type == 4}}" class="zan-card__right-col zan-c-orange" >修理工</text>
+                  </view> 
+                  
+                  </view>
+                  <view class="zan-card__left-col">
+                <text> {{itemName.name}} </text>		
+                  </view>
+                </view>
+
+                <view class="zan-card__detail-row zan-c-gray-darker">
+                  <view class="zan-card__right-col"><text> {{ itemName.reg_date }} </text></view>
+                  <view class="zan-card__left-col">
+
+                    <text wx:if="{{itemName.group_id == 0}}" class="zan-card__right-col zan-c-red" >暂未开通</text>
+                    <text wx:elif="{{itemName.group_id == 1}}" class="zan-card__right-col zan-c-red" >分公司</text>  
+                    <text wx:elif="{{itemName.group_id == 2}}" class="zan-card__right-col zan-c-red" >第一车队</text>
+                    <text wx:elif="{{itemName.group_id == 3}}" class="zan-card__right-col zan-c-green" >第二车队</text> 
+                    <text wx:elif="{{itemName.group_id == 4}}" class="zan-card__right-col zan-c-orange" >第三车队</text>
+                    <text wx:elif="{{itemName.group_id == 5}}" class="zan-card__right-col zan-c-green" >第四车队</text>
+                  
+                  </view>
+                </view>
+
+              
+              </view>
+            </view>
+          </view>
+        
+    </block>
+  
+    <view class="doc-title zan-hairline--bottom"><view class='tips'> 没有更多</view></view>
+
+  </scroll-view>
+  <view class="body-view">
+      <loading hidden="{{true}}" bindchange="loadingChange">
+        <text style='font-size: 28rpx;color: #2b2b2b;'>加载更多...</text>.
+      </loading>
+  </view> 
+</view>
+  
 
 	

@@ -125,7 +125,7 @@
   margin-left:0;width:auto;padding:5px 15px;overflow:hidden;position:relative;font-size:14px
 }
 .zan-card__thumb{
-  width:90rpx;height:90rpx;float:left;position:relative;margin-left:auto;margin-right:auto;overflow:hidden;background-size:cover
+  width:50px;height:50px;float:left;position:relative;margin-left:auto;margin-right:auto;overflow:hidden;background-size:cover
 }
 .zan-card__img{
   position:absolute;top:0;left:0;right:0;bottom:0;width:auto;height:auto;max-width:100%;max-height:100%
@@ -1085,7 +1085,7 @@
   display:block;white-space:nowrap
 }
 .zan-tab__bd--scroll .zan-tab__item{
-  min-width:80px
+  min-width:180px
 }
 .zan-tag{
   display:inline-block;position:relative;box-sizing:border-box;line-height:16px;padding:0 5px;border-radius:2px;font-size:11px;background:#c9c9c9;text-align:center;color:#fff

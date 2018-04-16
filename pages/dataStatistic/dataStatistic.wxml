@@ -1,0 +1,41 @@
+  <import src="/dist/tab/index.wxml" />
+
+<view class="container">
+	<view class="date">
+		<view class="year">
+		 <picker bindchange="bindPickerChange" value="{{yearindex}}" range="{{yeararray}}">
+		 		<text>年份</text>
+            <input class="yearpicker" type="text" placeholder="{{yeararray[yearindex]}}" name="group_id" /> 
+           <image src='../../images/iconfont-arrowdown.png'></image>
+        </picker>
+    </view>
+		<view class="month">
+          <picker bindchange="bindPickerChange1" value="{{monthindex}}" range="{{montharray}}">
+          	<text>月份</text>
+            <input class="monthpicker" type="text" placeholder="{{montharray[monthindex]}}" name="group_id" /> 
+             <image src='../../images/iconfont-arrowdown.png'></image>
+        </picker>
+    </view>
+		</view>
+ <view style="margin:0">
+    <template is="zan-tab" data="{{ ...tab3, componentId: 'tab3' }}"></template>
+  </view>
+  <view class="zan-panel" bindtap="repairdetailinfo">
+    <view class="zan-card">
+      <view class="zan-card__detail">
+        <view class="zan-card__detail-row">
+          <view class="zan-card__right-col zan-c-red"><text>结余:320</text></view>
+          <view class="zan-card__left-col">
+             <view class='cardId'><text>{{Info}}</text>   </view>
+          </view>
+        </view>
+        <view class="zan-card__detail-row">
+          <view class="zan-card__right-col"><text>本月:320</text> </view>
+          <view class="zan-card__left-col zan-ellipsis--l2">
+       <text> 十一车队</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

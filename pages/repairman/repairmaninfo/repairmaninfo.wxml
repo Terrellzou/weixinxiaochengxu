@@ -1,13 +1,13 @@
 <view class="container"> 
 	   <view class="repairmaninfo">
-     <image class='repairmanpic' src='../../../images/2.png' ></image>
-     <text class="repairman"> 修理工</text>  
+     <image class='repairmanpic' src='../../../images/default_pic.png' ></image>
+     <text class="repairman">{{repairman_name}}</text>  
      </view>
       <view class="zan-panel" >
     <view class="zan-panel">
     <view class="zan-cell">
       <view class="zan-cell__bd"><text>评价打分</text></view>
-      <view class="zan-cell__ft"><text style="color: red">5</text></view>
+      <view class="zan-cell__ft"><text style="color: red">{{amount}}</text></view>
     </view>
   </view>
 

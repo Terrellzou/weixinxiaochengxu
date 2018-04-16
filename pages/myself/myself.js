@@ -1,10 +1,12 @@
+
+var app=getApp()
+var  global_url=app.global_url
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-    
+      username:"",
+      url:"",
+      Info:[{}]
   },
   
 
@@ -12,6 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+     
     
   },
 
@@ -19,14 +22,52 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    var that=this
+     var type=app.type
+     that.setData({
+      username:app.name
+     })
+     console.log(that.data.username)
+        wx.setStorage({
+        key:"key",
+        data:app.type
+       })
+    console.log(app.type)
+    wx.getStorage({
+      key:'key',
+      success:function(res){
+      console.log(res.data)
+      wx.request({
+      url: global_url+'user/accessByUtype.do',
+     header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+
+      data:{
+          u_type:type
+      },
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res){
+        var skipInfo= res.data.data
+      
+        that.setData({
+            Info:skipInfo
+        })
+      }
+    })
+
+      }
+    })
+  
   },
 
   /**
@@ -63,35 +104,29 @@ Page({
   onShareAppMessage: function () {
     
   },
-  carmanage:function(){
-    wx.navigateTo({
-      url:"../Carlist/Carlist"
-    })
-  },
-  idmanage:function(){
-    wx.navigateTo({
-      url:"../user/user"
-    })
-  },
-  drivermanage:function(){
-    wx.navigateTo({
-      url:"../driver/driver"
-    })
-  },
-  fixmanage:function(){
-    wx.navigateTo({
-      url:"../repairman/repairman"
-    })
-  },
   personalinfo:function(){
     wx.navigateTo({
-      url:"personalinfo/personalinfo"
+      url:"./personalinfo/personalinfo"
     })
   },
-  logoff:function(){
-    wx.clearStorage()
-    wx.navigateTo({
+  skip:function(event){
+    var url1=event.currentTarget.dataset.skipid
+    console.log(url1)
+     wx.navigateTo({
+      url:url1
+     })
+     
+  },
+        logoff:function(){
+  //   wx.removeStorage({
+  //    key: 'key',
+  // success: function(res) {
+  wx.navigateTo({
       url:"../login/login"
     })
-  }
+//   } 
+// })
+
+    
+  },
 })

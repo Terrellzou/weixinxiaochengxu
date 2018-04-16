@@ -1,6 +1,6 @@
 
 	<view class="login">
-		<image class="avatar" style="" mode="" src="../../../images/3.png" binderror="" bindload=""></image>
+		<image class="avatar" style="" mode="" src="../../../images/log2.png" binderror="" bindload=""></image>
 		<view class="doc-title zan-hairline--bottom"></view>
 		<view class="username">
 			<text>用户名</text>
